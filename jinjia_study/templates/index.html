@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% from "macro.html" import course_item %}
+
+{% block content %}
+<h1> hello {{course.teacher.name}} </h1>
+{{ course_item(course) }}
+<p>{{ '=' * 20 }}</p>
+{{ course_item(course, type="flask") }}
+{% endblock %}
+
